@@ -4,7 +4,7 @@ volumes:
    tiledesk-datadb:
 services:
   dashboard:
-   image: tiledesk/tiledesk-dashboard:2.6.43
+   image: rengatech/tiledesk-dashboard:latest
    container_name: tiledesk-dashboard 
    environment: 
       - FEATURES_TOKEN=PAY:F-ANA:F-ACT:F-TRI:T-GRO:F-DEP:F-OPH:F-MTL:T-CAR:F-V1L:T-PSA:F-MTT:T-SUP:T-LBS:T-APP:T-DEV:F-NOT:T-IPS:F-ETK:F-RAS:T-PPB:F-PET:F-MTS:F-TIL:T-DGF:T-NAT:T-HPB:F-TOW:T-KNB:F-BAN:F-AST:F-MON:F-CNT:F-AUT:F-WUN:F
@@ -39,7 +39,7 @@ services:
       - "4500:80" #use expose if you want to block external access
   
   cds:
-   image: tiledesk/design-studio:1.17.0
+   image: rengatech/tiledesk-design-studio:latest
    container_name: tiledesk-cds 
    environment: 
       - FEATURES_TOKEN=PAY:F-ANA:F-ACT:F-TRI:T-GRO:F-DEP:F-OPH:F-MTL:T-CAR:F-V1L:T-PSA:F-MTT:T-SUP:T-LBS:T-APP:T-DEV:F-NOT:T-IPS:F-ETK:F-RAS:T-PPB:F-PET:F-MTS:F-TIL:T-DGF:T-NAT:T-HPB:F-TOW:T-KNB:F-BAN:F-AST:F-MON:F-CNT:F-AUT:F-WUN:F
@@ -145,7 +145,7 @@ services:
     command: [nginx-debug, '-g', 'daemon off;']
     
   server:
-    image: tiledesk/tiledesk-server:2.8.7
+    image: rengatech/tiledesk-server:latest
     container_name: tiledesk-server
     restart: always       
     environment: 
